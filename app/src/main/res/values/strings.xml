@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- A -->
+    <string name="action_example">Example action</string>
+    <string name="action_settings">Settings</string>
+    <string name="app_name">Yippie</string>
+    <string name="age">Age</string>
+
+    <!-- B -->
+    <string name="back">Back</string>
+    <string name="back_to_menu">Back to Category Menu</string>
+
+    <!-- C -->
+    <string name="change_area">Change Area</string>
+    <string name="connecting_excitement">C o n n e c t i n g     E x c i t e m e n t</string>
+    <string name="contentDescription">Content Description</string>
+    <string name="contact_us">CONTACT US</string>
+
+    <!-- D -->
+    <string name="days">Days</string>
+
+    <!-- E -->
+    <string name="email_address">Email address</string>
+    <string name="email_address_or_username">Email address / Username</string>
+
+    <!-- F -->
+    <string name="fb">Facebook</string>
+    <string name="feedback_msg">Type your message here</string>
+    <string name="forget_pass">- Forget password? -</string>
+
+    <!-- G -->
+    <string name="google">Google</string>
+
+    <!-- H -->
+    <string name="hours">Hours</string>
+
+    <!-- I -->
+    <string name="icon">Icon</string>
+    <string name="imgDesc">Image Description</string>
+    <string name="in">IN</string>
+
+    <!-- J -->
+    <string name="join">Join</string>
+    <string name="join_with_email">Join with Email</string>
+
+    <!-- K -->
+
+    <!-- L -->
+
+    <!-- M -->
+    <string name="minutes">Minutes</string>
+    <string name="message">Message</string>
+
+    <!-- N -->
+    <string name="next">NEXT</string>
+    <string name="no">No</string>
+
+    <!-- O -->
+    <string name="or">or</string>
+
+    <!-- P -->
+    <string name="password">Password</string>
+    <string name="promotion">- PROMOTIONS -</string>
+
+    <!-- Q -->
+
+    <!-- R -->
+
+    <!-- S -->
+    <string name="seconds">Second</string>
+    <string name="select_category">Please select a Category</string>
+    <string name="select_subcategory">Please select a Subcategory</string>
+    <string name="select_thirdcategory">Please select a Third Category</string>
+    <string name="select_state">Select a State</string>
+    <string name="sign_in">Sign In</string>
+    <string name="sign_in_pretext">Let\'s sign you in!</string>
+    <string name="sign_in_fb">Sign in with Facebook</string>
+    <string name="sign_in_google">Sign in with Google +</string>
+    <string name="signout_alert_title">Sign out</string>
+    <string name="signout_alert_message">Are you sure want to sign out?</string>
+    <string name="subject">Subject</string>
+    <string name="submit">Submit</string>
+
+    <!-- T -->
+
+    <!-- U -->
+    <string name="username">Username</string>
+
+    <!-- V -->
+
+    <!-- W -->
+
+    <!-- X -->
+
+    <!-- Y -->
+    <string name="yes">Yes</string>
+
+    <!-- Z -->
+
+</resources>

@@ -1,0 +1,130 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Top section -->
+    <RelativeLayout
+        android:id="@+id/mapTopSection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/lightBlue"
+        android:gravity="center_vertical">
+
+        <!-- Back button -->
+        <LinearLayout
+            android:id="@+id/btnBack"
+            android:background="@drawable/btn_map_back_act"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="10dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/contentDescription"
+                android:src="@drawable/back_arrow_white"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text="@string/back"
+                android:textColor="@color/white"
+                android:textSize="18sp"/>
+
+        </LinearLayout>
+
+        <!-- Title Container -->
+        <HorizontalScrollView
+            android:id="@+id/titleContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/btnBack"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="20dp"
+            android:orientation="horizontal"
+            android:padding="10dp"
+            android:scrollbars="none"
+            android:requiresFadingEdge="horizontal"
+            android:fadingEdgeLength="5dp">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:textColor="@color/white"
+                android:textSize="16sp"/>
+
+        </HorizontalScrollView>
+
+    </RelativeLayout>
+
+    <!-- Category section  -->
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/lightBlue"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp">
+
+        <!-- Label -->
+        <TextView
+            android:id="@+id/thirdCategorySelectText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:textColor="@color/darkBlue"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:includeFontPadding="false"
+            android:text="@string/select_thirdcategory"
+            android:singleLine="true"/>
+
+        <!-- Divider -->
+        <View
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="1dp" />
+
+    </LinearLayout>
+
+    <!-- Category selection -->
+    <ScrollView
+        android:background="@color/lightBlue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:scrollbarThumbVertical="@drawable/scrollbar"
+        android:scrollbarSize="3dp"
+        android:requiresFadingEdge="vertical"
+        android:fadingEdgeLength="10dp">
+
+        <!-- This linear layout will act a listview -->
+        <LinearLayout
+            android:id="@+id/thirdCategoryList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp">
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

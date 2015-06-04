@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lightBlue"
+    android:orientation="vertical"
+    android:gravity="center">
+
+    <!-- Partner Logo -->
+    <ImageView
+        android:id="@+id/partnerLogo"
+        android:layout_width="240dp"
+        android:layout_height="200dp"
+        android:contentDescription="@string/icon"
+        android:src="@drawable/voucher"/>
+
+    <TextView
+        android:id="@+id/nextEventTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Next Yippie : Baskin Rorbin"
+        android:textColor="@color/white"/>
+
+    <ImageView
+        android:id="@+id/eventTimer"
+        android:layout_width="220dp"
+        android:layout_height="80dp"
+        android:contentDescription="@string/icon"
+        android:src="@drawable/count_down"/>
+
+    <include
+        android:id="@+id/btnParticipate"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        layout="@layout/btn_event_particpate"/>
+
+    <ImageView
+        android:id="@+id/eventAdvertisement"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:contentDescription="@string/icon"
+        android:src="@drawable/advertisement"/>
+
+</LinearLayout>

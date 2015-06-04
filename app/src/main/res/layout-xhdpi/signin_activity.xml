@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:background="@color/lightBlue">
+
+    <!-- Yippie Logo & Slogan section -->
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <!-- Yippie Logo -->
+        <ImageView
+            android:id="@+id/yippieLogo"
+            android:src="@drawable/logo_yippie_full"
+            android:contentDescription="@string/imgDesc"
+            android:layout_width="220dp"
+            android:layout_height="115dp"/>
+
+        <!-- Slogon text field -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="5dp"
+            android:text="@string/connecting_excitement"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:singleLine="true"/>
+
+    </LinearLayout>
+
+    <!-- Login Field -->
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginStart="60dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginTop="20dp">
+
+        <!-- Email Address text field -->
+        <EditText
+            android:id="@+id/signinEmailUsername"
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:inputType="textEmailAddress"
+            android:textSize="14sp"
+            android:singleLine="true"
+            android:hint="@string/email_address_or_username"/>
+
+        <!-- Password text field -->
+        <EditText
+            android:id="@+id/signinPassword"
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:padding="10dp"
+            android:inputType="textPassword"
+            android:textSize="14sp"
+            android:singleLine="true"
+            android:hint="@string/password" />
+
+        <!-- Sign In button -->
+        <include
+            android:id="@+id/btnSignIn"
+            layout="@layout/btn_signin"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="5dp"/>
+
+
+        <!-- FB Sign In Button -->
+        <include
+            android:id="@+id/btnFBSignIn"
+            layout="@layout/btn_facebook_login"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="35dp"/>
+
+        <!-- Google Signin Button -->
+        <include
+            android:id="@+id/btnGoogleSignIn"
+            layout="@layout/btn_google_plus_login"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="5dp"/>
+
+
+    </LinearLayout>
+
+    <!-- Sign up  & Forget password section -->
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginTop="50dp">
+
+        <TextView
+            android:id="@+id/btnForgetPass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="5dp"
+            android:text="@string/forget_pass"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:singleLine="true"/>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <!--  Background Color for Facebook SignIn Button -->
+    <solid
+        android:color="#3767B0"/>
+
+    <corners
+        android:topLeftRadius="1dp"
+        android:topRightRadius="1dp"
+        android:bottomLeftRadius="1dp"
+        android:bottomRightRadius="1dp" />
+
+</shape>

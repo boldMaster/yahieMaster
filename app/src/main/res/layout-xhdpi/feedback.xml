@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingLeft="15dp"
+    android:paddingStart="15dp"
+    android:paddingRight="15dp"
+    android:paddingEnd="15dp">
+
+    <LinearLayout
+        android:id="@+id/feedback_subject_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="40dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/pageTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:text="@string/contact_us" />
+
+        <TextView
+            android:id="@+id/subjectText1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:text="@string/subject" />
+
+        <!-- Drop down subject list  -->
+
+            <Spinner
+                android:id="@+id/feedback_subject"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:spinnerMode="dropdown"
+                android:background="@drawable/grey_border_frame"
+                android:popupBackground="@color/lightGrey"/>
+
+
+    </LinearLayout>
+
+    <!-- Feedback message container -->
+    <LinearLayout
+        android:id="@+id/feedback_msg_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/subjectText2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="5dp"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:text="@string/message" />
+
+        <!-- Feedback Edit text  -->
+        <EditText
+            android:id="@+id/feedback_msg"
+            android:background="@drawable/border"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:inputType="textMultiLine"
+            android:lines="8"
+            android:gravity="top"
+            android:textSize="18sp"
+            android:scrollHorizontally="false"
+            android:scrollbars="vertical"
+            android:hint="@string/feedback_msg"/>
+
+    </LinearLayout>
+
+    <include
+        android:id="@+id/btn_feedback_submit"
+        layout="@layout/btn_feedback_submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp"/>
+
+</LinearLayout>

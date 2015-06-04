@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/btn_location_state_list_item_act"
+    android:clickable="true"
+    android:focusable="true"
+    android:gravity="center_horizontal">
+
+    <!-- Category name -->
+    <TextView
+        android:id="@+id/stateName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:textColor="@color/whiteSmoke"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:includeFontPadding="false"
+        android:text="@string/abc_action_bar_home_description"
+        android:singleLine="true"/>
+
+    <!-- Divider -->
+    <View
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="1dp" />
+
+</LinearLayout>

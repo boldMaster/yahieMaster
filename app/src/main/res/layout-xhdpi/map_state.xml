@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Top section -->
+    <RelativeLayout
+        android:id="@+id/mapTopSection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/lightBlue"
+        android:gravity="center_vertical">
+
+        <!-- Back button -->
+        <LinearLayout
+            android:id="@+id/btnBack"
+            android:background="@drawable/btn_map_back_act"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="10dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/contentDescription"
+                android:src="@drawable/back_arrow_white"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text="Back"
+                android:textColor="@color/white"
+                android:textSize="20sp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/btnBack"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:gravity="center_horizontal"
+                android:textColor="@color/white"
+                android:textSize="18sp"/>
+
+        </LinearLayout>
+        
+    </RelativeLayout>
+
+    <!-- Map section -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/lightBlue"
+        android:padding="20dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/contentDescription"
+            android:src="@drawable/penang_map_v2"
+            android:id="@+id/imageView" />
+
+        <ImageView
+            android:id="@+id/map_area_one"
+            android:layout_width="110dp"
+            android:layout_height="100dp"
+            android:contentDescription="@string/contentDescription"
+            android:src="@drawable/trans"
+            android:layout_marginTop="135dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:clickable="true"/>
+
+    </RelativeLayout>
+
+
+</LinearLayout>

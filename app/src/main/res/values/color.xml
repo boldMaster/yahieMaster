@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Place all your color hex code here-->
+
+<resources>
+
+    <color name="white">#FFFFFF</color>
+    <color name="black">#151515</color>
+    <color name="grey">#DEDEDE</color>
+    <color name="lightGrey">#F7F7F7</color>
+    <color name="darkGrey">#464541</color>
+    <color name="lightBlue">#3399FF</color>
+    <color name="lightBlueV2">#99ccff</color>
+    <color name="lightBlueV3">#D7E9FA</color>
+    <color name="lightBlueV4">#ACCCC6</color>
+    <color name="lightYellow">#FCF7EA</color>
+    <color name="whiteSmoke">#F2F3F8</color>
+    <color name="darkBlue">#194779</color>
+    <color name="timerColor">#ff0080</color>
+    <color name="red">#FF0000</color>
+
+    <color name="transBlack">#60000000</color>
+</resources>

@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true">
+
+
+
+    <!-- Top section -->
+    <RelativeLayout
+        android:id="@+id/mapTopSection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/lightBlue"
+        android:gravity="center_vertical">
+
+        <!-- Back button -->
+        <LinearLayout
+            android:id="@+id/btnBack"
+            android:background="@drawable/btn_map_back_act"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="10dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/contentDescription"
+                android:src="@drawable/back_arrow_white"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text="@string/back"
+                android:textColor="@color/white"
+                android:textSize="18sp"/>
+
+        </LinearLayout>
+
+        <!-- Title Container -->
+        <HorizontalScrollView
+            android:id="@+id/titleContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/btnBack"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="10dp"
+            android:scrollbars="none"
+            android:requiresFadingEdge="horizontal"
+            android:fadingEdgeLength="5dp">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:textColor="@color/white"
+                android:textSize="16sp"/>
+
+        </HorizontalScrollView>
+
+    </RelativeLayout>
+
+    <HorizontalScrollView
+        android:layout_below="@+id/mapTopSection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scrollbars="none">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/map_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/contentDescription"
+                    android:src="@drawable/penang_map_area"/>
+
+                <ImageView
+                    android:id="@+id/store_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/contentDescription"
+                    android:src="@drawable/icon_premium_store"
+                    android:layout_marginTop="193dp"
+                    android:layout_marginStart="226dp" />
+
+                <ImageView
+                    android:id="@+id/store_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/contentDescription"
+                    android:src="@drawable/icon_premium_store"
+                    android:layout_marginTop="193dp"
+                    android:layout_marginStart="426dp" />
+
+                <ImageView
+                    android:id="@+id/store_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/contentDescription"
+                    android:src="@drawable/icon_premium_store"
+                    android:layout_marginTop="180dp"
+                    android:layout_marginStart="100dp" />
+
+                <ImageView
+                    android:id="@+id/store_4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/contentDescription"
+                    android:src="@drawable/icon_premium_store"
+                    android:layout_marginTop="370dp"
+                    android:layout_marginStart="240dp"/>
+
+            </RelativeLayout>
+        </ScrollView>
+    </HorizontalScrollView>
+
+    <RelativeLayout
+        android:id="@+id/shop_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:padding="10dp"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:id="@+id/shop_action_cont"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/location_go"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/contentDescription"
+                android:src="@drawable/location_go_v2"/>
+
+            <ImageView
+                android:id="@+id/location_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:contentDescription="@string/contentDescription"
+                android:src="@drawable/location_phone"/>
+
+            <ImageView
+                android:id="@+id/location_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:contentDescription="@string/contentDescription"
+                android:src="@drawable/location_info_v2"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/shop_info_cont"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_toEndOf="@+id/shop_action_cont"
+            android:layout_marginStart="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/normal_shop_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:text="388 Chicken Recipe"/>
+
+            <TextView
+                android:id="@+id/normal_shop_category_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:singleLine="true"
+                android:textColor="@color/darkGrey"
+                android:textSize="14sp"
+                android:text="Chinese Cuisine"/>
+
+            <TextView
+                android:id="@+id/normal_shop_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:maxLines="3"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:text="3k, Lorong Delima 1, Island Glades, 11600, Gelugor. Penang, Malaysia"/>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <!-- Select Menu Container -->
+    <LinearLayout
+        android:layout_below="@+id/mapTopSection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <!-- Select Menu  -->
+        <ImageView
+            android:id="@+id/selectMenu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/contentDescription"
+            android:src="@drawable/icon_select_menu"
+            android:clickable="true"/>
+    </LinearLayout>
+
+    <!-- Popup Menu Container -->
+    <RelativeLayout
+        android:id="@+id/popupMenu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/transBlack"
+        android:paddingTop="40dp"
+        android:paddingBottom="40dp"
+        android:paddingStart="50dp"
+        android:paddingEnd="50dp"
+        android:visibility="gone"
+        android:clickable="true">
+
+        <include
+            layout="@layout/category_popup_selectbox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>
