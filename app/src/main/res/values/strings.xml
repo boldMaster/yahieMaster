@@ -28,6 +28,7 @@
     <string name="fb">Facebook</string>
     <string name="feedback_msg">Type your message here</string>
     <string name="forget_pass">- Forget password? -</string>
+    <string name="facebook_app_id">359450210926145</string>
 
     <!-- G -->
     <string name="google">Google</string>

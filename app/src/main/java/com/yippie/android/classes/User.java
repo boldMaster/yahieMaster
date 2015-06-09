@@ -3,6 +3,7 @@ package com.yippie.android.classes;
 import android.content.ContentValues;
 import android.database.Cursor;
 
+import com.facebook.AccessToken;
 import com.yippie.android.library.SqliteDB;
 import com.yippie.android.library.Utility;
 
@@ -13,6 +14,7 @@ import com.yippie.android.library.Utility;
 public class User
 {
     private Integer uid;
+    private Integer fid;
     private String name;
     private String email;
     private String passwordEncoded;
@@ -43,6 +45,16 @@ public class User
         this.accessKey = accessKey;
         this.created = created;
         this.updated = updated;
+    }
+
+    /**
+     * Facebook User Constructor
+     */
+    public User(Integer fid, String name, String email)
+    {
+        this.fid = fid;
+        this.name = name;
+        this.email = email;
     }
 
     // Getter
@@ -86,12 +98,16 @@ public class User
      * @param password  - The password that user entered during registration
      * @return The status of registration
      */
-    public static Boolean registerUser(String email, String userName, String password)
+    public static Boolean registerUser(String email, String userName, String password ,AccessToken objAccessToken)
     {
+        //     Boolean blnExist = isUserEmailExists(email);
+        //    if(blnExist && objAccessToken!=null) {
+        //       loginUser(email, userName, password, objAccessToken);
+        //      return false;
+        // }
         // Define table name
         String tableName = SqliteDB.TABLE_USER;
         SqliteDB db = SqliteDB.getInstance();
-
         // Current timestamp
         Long timestamp = Utility.getCurrentTimestamp();
 
@@ -102,6 +118,8 @@ public class User
         insertInfo.put("password", password);
         insertInfo.put("created", timestamp);
         insertInfo.put("updated", timestamp);
+        if(objAccessToken != null)
+            insertInfo.put("accessKey",objAccessToken.toString());
 
         return db.insertDBRow(tableName,insertInfo);
     }
