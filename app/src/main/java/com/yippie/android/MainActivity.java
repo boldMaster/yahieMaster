@@ -8,10 +8,13 @@ import android.app.Fragment;
 import android.app.FragmentManager;
 import android.support.v4.view.ViewPager;
 import android.util.SparseArray;
+import android.content.Intent;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import com.yippie.android.classes.User;
 import com.yippie.android.library.TabsAdapter;
 
 public class MainActivity extends Activity
@@ -29,6 +32,16 @@ public class MainActivity extends Activity
         this.actionBar = getActionBar();
         // Set layout
         this.setContentView(R.layout.activity_main);
+
+        if(!this.isLoggedin()) {
+            // Enter here if user already login into the app
+            // We will redirect user to main page
+            // Launch Sign In Activity
+            // Note: Please finish() after start activity
+            Intent intent = new Intent(getApplicationContext(), SigninActivity.class);
+            startActivity(intent);
+            finish();
+        }
 
         fragmentList = new SparseArray<Fragment>();
 
@@ -103,6 +116,18 @@ public class MainActivity extends Activity
         else
         {
             childFragmentManager.popBackStack();
+        }
+    }
+
+    // Check Logged in session
+    protected boolean isLoggedin() {
+        // Get user information
+        User user = User.getLoginUser();
+        if (user != null) {
+            Toast.makeText(getApplicationContext(), user.getName(), Toast.LENGTH_SHORT).show();
+            return true;
+        }else{
+            return false;
         }
     }
 }
