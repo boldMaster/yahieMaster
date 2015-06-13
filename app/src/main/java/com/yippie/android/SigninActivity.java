@@ -12,6 +12,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.yippie.android.classes.User;
+import com.yippie.android.classes.FacebookAuth;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,6 +25,7 @@ public class SigninActivity extends Activity
     RelativeLayout btnFBSignin;
     RelativeLayout btnGoogleSignin;
     TextView btnForgetPass;
+    private FacebookAuth objFacebookAuth;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -51,12 +53,12 @@ public class SigninActivity extends Activity
         });
 
         // Facebook Sign in button Click Event
+        final Activity a = this;
+        this.objFacebookAuth = FacebookAuth.getInstance(getApplicationContext());
         btnFBSignin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                Toast.makeText(getApplicationContext(), "Sign in Facebook Clicked!", Toast.LENGTH_SHORT).show();
-
+                objFacebookAuth.facebookLogin(a);
             }
         });
 
@@ -211,6 +213,15 @@ public class SigninActivity extends Activity
         }
         public List<String> getErrList(){
             return errMsgList;
+        }
+    }
+
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        boolean blnSuccess = this.objFacebookAuth.activityResult(requestCode,resultCode,data);
+        if(blnSuccess){
+            Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+            startActivity(intent);
+            finish();
         }
     }
 }

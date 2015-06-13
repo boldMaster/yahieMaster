@@ -22,7 +22,6 @@ import com.facebook.GraphResponse;
 import com.facebook.login.LoginManager;
 import com.facebook.login.LoginResult;
 
-
 /**
  * Created by Bryan on 9/6/2015.
  */
@@ -36,14 +35,18 @@ public class FacebookAuth {
     private static String fbEmailPermission = "email";
     private static String fbLocationPermission = "user_location";
 
+    /* Specify the field permission we needed from Facebook SDK
+     *Add on if more field required
+     */
     private static String[] fbPermissionField = {"id",
-            "name",
-            "first_name",
-            "last_name",
-            "email",
-            "location",
-            "devices"
+                                                "name",
+                                                "first_name",
+                                                "last_name",
+                                                "email",
+                                                "location",
+                                                "devices"
     };
+
     /*Facebook Field List
      *Add on if more field required
      */
@@ -117,7 +120,7 @@ public class FacebookAuth {
                                         String strName = object.getString(fbNameField);
                                         String strEmail= object.getString(fbEmailField);
 
-                                        boolean blnSuccess = User.registerUser(strEmail,strName,"123123",objAccessToken);
+                                        boolean blnSuccess = User.registerUser(strEmail,strName,"0",objAccessToken);
                                         if(blnSuccess)
                                             Log.i("Save to User", "Cretea an user");
                                     } catch (JSONException e) {
@@ -183,7 +186,8 @@ public class FacebookAuth {
         }else
             return false;
     }
-    protected boolean activityResult(final int requestCode, final int resultCode, final Intent data) {
+
+    public boolean activityResult(final int requestCode, final int resultCode, final Intent data) {
         this.getCallBackManager().onActivityResult(requestCode, resultCode, data);
         if(this.isLoggedIn()) {
             return true;
