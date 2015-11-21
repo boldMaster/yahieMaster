@@ -23,12 +23,16 @@
     <!-- E -->
     <string name="email_address">Email address</string>
     <string name="email_address_or_username">Email address / Username</string>
+    <string name="error_email_not_exist"> Email does not exist. </string>
+    <string name="error_email_validation_failed"> Email invalid, Please insert an valid email. </string>
+    <string name="error_access_denied"> Access Denied. </string>
 
     <!-- F -->
     <string name="fb">Facebook</string>
     <string name="feedback_msg">Type your message here</string>
     <string name="forget_pass">- Forget password? -</string>
     <string name="facebook_app_id">359450210926145</string>
+    <string name="forgot_password_email_sent">Email Successfully Sent, Please check your email to change your password.</string>
 
     <!-- G -->
     <string name="google">Google</string>
@@ -47,7 +51,9 @@
 
     <!-- K -->
 
+
     <!-- L -->
+
 
     <!-- M -->
     <string name="minutes">Minutes</string>
@@ -66,7 +72,10 @@
 
     <!-- Q -->
 
+
     <!-- R -->
+
+    <string name="reset_password">Send Reset Password Link</string>
 
     <!-- S -->
     <string name="seconds">Second</string>
@@ -85,18 +94,25 @@
 
     <!-- T -->
 
+
     <!-- U -->
     <string name="username">Username</string>
 
     <!-- V -->
 
+
     <!-- W -->
 
+
     <!-- X -->
+
 
     <!-- Y -->
     <string name="yes">Yes</string>
 
     <!-- Z -->
+
+    <string name="title_activity_forget_password">ForgetPasswordActivity</string>
+    <string name="hello_world">Hello world!</string>
 
 </resources>
