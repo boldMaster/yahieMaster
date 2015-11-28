@@ -12,6 +12,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.yippie.android.classes.Location;
+import com.yippie.android.library.Criteria;
 import com.yippie.android.library.ParentFragmentInterface;
 
 import java.util.List;
@@ -65,9 +66,11 @@ public class CategorySelectStateFragment extends Fragment
             stateView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-
                     // Add new MapDivision fragment
                     CategorySelectCategoryFragment mapSelectArea = new CategorySelectCategoryFragment();
+                    // Set selected state to criteria
+                    Criteria objCriteria = Criteria.initialize();
+                    objCriteria.setCriteria(Criteria.LOCATION,stateId);
                     // Store state object to args and pass to next fragment
                     Bundle args = new Bundle();
                     args.putInt("StateId",stateId);

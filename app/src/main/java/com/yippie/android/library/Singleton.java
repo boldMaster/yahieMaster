@@ -10,6 +10,7 @@ public class Singleton
 {
     private static Singleton instance;
     public SqliteDB sqliteDB;
+    public Criteria criteria;
 
     public static void initInstance(Context context)
     {
