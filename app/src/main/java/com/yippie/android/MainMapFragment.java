@@ -89,4 +89,9 @@ public class MainMapFragment extends Fragment implements ParentFragmentInterface
             fragmentStack.pop();
         }
     }
+
+    @Override
+    public void switchScreen(Boolean isBack, Integer action) {
+
+    }
 }

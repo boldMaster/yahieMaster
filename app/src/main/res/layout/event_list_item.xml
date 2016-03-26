@@ -19,11 +19,11 @@
 
         <!-- Shop Image- -->
         <ImageView
-            android:id="@+id/shop_image"
+            android:id="@+id/event_image"
             android:layout_width="90dp"
             android:layout_height="90dp"
             android:contentDescription="@string/contentDescription"
-            android:src="@drawable/paparich"/>
+            android:src="@drawable/voucher"/>
 
         <!-- Shop information -->
         <LinearLayout
@@ -33,24 +33,33 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/shop_name"
+                android:id="@+id/event_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:singleLine="true"
                 android:textColor="@color/black"
                 android:textSize="15sp"
                 android:textStyle="bold"
-                android:text="388 Chicken Recipe"/>
+                android:text="Event name"/>
 
             <TextView
-                android:id="@+id/shop_address"
+                android:id="@+id/event_desc"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="6dp"
                 android:maxLines="3"
                 android:textColor="@color/black"
                 android:textSize="13sp"
-                android:text="3k, Lorong Delima 1, Island Glades, 11600, Gelugor. Penang, Malaysia"/>
+                android:text="Testing description for the event it self"/>
+            <TextView
+                android:id="@+id/event_expire_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:maxLines="3"
+                android:textColor="@color/black"
+                android:textSize="13sp"
+                android:text="Expire Date : 29 March 2016"/>
 
         </LinearLayout>
 
@@ -69,28 +78,7 @@
         android:paddingEnd="10dp">
 
         <LinearLayout
-            android:id="@+id/btn_shop_call"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:background="@drawable/btn_shop_item_function_act"
-            android:orientation="horizontal"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:padding="10dp"
-            android:layout_marginEnd="2dp"
-            android:clickable="true">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="CALL"
-                android:textSize="13sp"
-                android:textColor="@color/darkBlue"/>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/btn_shop_direction"
+            android:id="@+id/btn_event_direction"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:background="@drawable/btn_shop_item_function_act"
@@ -112,7 +100,7 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/btn_shop_info"
+            android:id="@+id/btn_redeem"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:background="@drawable/btn_shop_item_function_act"
@@ -126,7 +114,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="VIEW DETAIL"
+                android:text="Redeem Now"
                 android:textSize="13sp"
                 android:textColor="@color/darkBlue"/>
 

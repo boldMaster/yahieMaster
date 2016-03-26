@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textViewHour"
+        android:layout_width="120px"
+        android:layout_height="100px"
+        android:layout_centerVertical="true"
+        android:gravity="center_vertical|center_horizontal"
+        android:textSize="40px"
+        android:text="01"
+        style="@style/TimeBox"
+        />
+    <TextView
+        android:id="@+id/textViewMinute"
+        android:layout_width="120px"
+        android:layout_height="100px"
+        android:layout_centerVertical="true"
+        android:gravity="center_vertical|center_horizontal"
+        android:textSize="40px"
+        android:text="02"
+        style="@style/TimeBox"
+        />
+
+    <TextView
+        android:id="@+id/textViewSecond"
+        android:layout_width="120px"
+        android:layout_height="100px"
+        android:layout_centerVertical="true"
+        android:gravity="center_vertical|center_horizontal"
+        android:textSize="40px"
+        android:text="03"
+        style="@style/TimeBox"
+        />
+
+</LinearLayout>

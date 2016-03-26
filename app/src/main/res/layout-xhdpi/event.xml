@@ -8,10 +8,18 @@
     android:gravity="center">
 
     <!-- Partner Logo -->
+    <TextView
+        android:id="@+id/currentEventTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Event Now : Baskin Robbin"
+        android:textColor="@color/white"
+        android:layout_gravity="center_horizontal" />
+
     <ImageView
         android:id="@+id/partnerLogo"
-        android:layout_width="240dp"
-        android:layout_height="200dp"
+        android:layout_width="202dp"
+        android:layout_height="168dp"
         android:contentDescription="@string/icon"
         android:src="@drawable/voucher"/>
 
@@ -22,13 +30,18 @@
         android:text="Next Yippie : Baskin Rorbin"
         android:textColor="@color/white"/>
 
-    <ImageView
-        android:id="@+id/eventTimer"
-        android:layout_width="220dp"
-        android:layout_height="80dp"
-        android:contentDescription="@string/icon"
-        android:src="@drawable/count_down"/>
-
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"><include
+        layout="@layout/timer"
+        />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"><include
+        layout="@layout/timer_title"
+        />
+    </LinearLayout>
     <include
         android:id="@+id/btnParticipate"
         android:layout_width="180dp"

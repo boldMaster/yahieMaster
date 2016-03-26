@@ -213,7 +213,7 @@ public class ForgetPasswordActivity extends Activity implements HttpRequestInter
 
     /**
      * This is an AsyncTask to handle the following process:
-     * 1. Validate user crdential at server
+     * 1. Send forget password link
      */
     public class ForgetPassword extends AsyncTask<Void, Void, Void>
     {

@@ -118,6 +118,8 @@ public class Location
         malaysiaStateList.add(new State(12,"Sabah",null));
         malaysiaStateList.add(new State(13,"Sarawak",null));
         malaysiaStateList.add(new State(14,"Negeri Sembilan",null));
+        malaysiaStateList.add(new State(15,"Labuan",null));
+        malaysiaStateList.add(new State(16,"Putrajaya",null));
 
         return malaysiaStateList;
     }

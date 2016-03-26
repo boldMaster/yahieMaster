@@ -25,6 +25,7 @@
     <string name="email_address_or_username">Email address / Username</string>
     <string name="error_email_not_exist"> Email does not exist. </string>
     <string name="error_email_validation_failed"> Email invalid, Please insert an valid email. </string>
+    <string name="error_event_retrieve_failed"> Event invalid, No event is returned. </string>
     <string name="error_access_denied"> Access Denied. </string>
 
     <!-- F -->

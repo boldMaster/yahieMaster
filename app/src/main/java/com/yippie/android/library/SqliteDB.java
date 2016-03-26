@@ -28,6 +28,12 @@ public class SqliteDB extends SQLiteOpenHelper
     private int openedConnection = 0;                       // This variable will used to indicated how many connected is currently opened
     public static final String TABLE_USER = "yippe_user";           // Table that store the register user
     public static final String TABLE_LOGIN = "yippie_user_login";   // Table that store the user login information
+    public static final String TABLE_CATEGORY_GROUP = "yippie_category_group";  // Table that store the list of category group
+    public static final String TABLE_CATEGORY = "yippie_category";              // Table that store the list of the category
+    public static final String TABLE_SUB_CATEGORY = "yippie_sub_category";      // Table that store the list of the sub category
+    public static final String TABLE_TTL_TIMESTAMP = "yippie_ttl_timestamp";    // Table that store the last update timestamp of each view
+    public static final String TABLE_EVENT = "events"; // Table use to store event info/details
+    public static final String TABLE_PARTICIPANT_EVENT = "participant_events"; // Table use to store user participated event info/details
 
     /**
      *  This is a function that ensure all SQL function using the same singleton SqliteDB instance.
@@ -86,9 +92,68 @@ public class SqliteDB extends SQLiteOpenHelper
                 + "created INTEGER"
                 +")";
 
+        String CREATE_CATEGORY_GROUP_TABLE = "CREATE TABLE " + TABLE_CATEGORY_GROUP + "("
+                + "category_group_id INTEGER PRIMARY KEY,"
+                + "category_group_name TEXT"
+                +")";
+
+        String CREATE_CATEGORY_TABLE = "CREATE TABLE " + TABLE_CATEGORY + "("
+                + "category_id INTEGER PRIMARY KEY,"
+                + "category_group_id INTEGER ,"
+                + "category_name TEXT"
+                +")";
+
+        String CREATE_SUB_CATEGORY_TABLE = "CREATE TABLE " + TABLE_SUB_CATEGORY + "("
+                + "sub_category_id INTEGER PRIMARY KEY,"
+                + "category_id INTEGER ,"
+                + "category_group_id INTEGER ,"
+                + "sub_category_name TEXT"
+                +")";
+
+        String CREATE_TTL_TIMESTAMP_TABLE = "CREATE TABLE " + TABLE_TTL_TIMESTAMP + "("
+                + "id INTEGER PRIMARY KEY,"
+                + "updated INTEGER"
+                + ")";
+
+        String CREATE_EVENT_TABLE = "CREATE TABLE " + TABLE_EVENT + "("
+                + "event_id INTEGER PRIMARY KEY,"
+                + "place_id INTEGER ,"
+                + "advertiser_id INTEGER, "
+                + "event_title TEXT, "
+                + "event_desc TEXT, "
+                + "total_amount INTEGER, "
+                + "total_winner INTEGER, "
+                + "amount_per_voucher INTEGER, "
+                + "start_date timestamp, "
+                + "end_date timestamp,"
+                + "redeem_duration INTEGER,"
+                + "updated_at timestamp "
+                +")";
+
+        String CREATE_PARTICIPANT_EVENT_TABLE = "CREATE TABLE " + TABLE_PARTICIPANT_EVENT + "("
+                + "event_id INTEGER PRIMARY KEY,"
+                + "place_id INTEGER ,"
+                + "advertiser_id INTEGER, "
+                + "event_title TEXT, "
+                + "event_desc TEXT, "
+                + "total_amount INTEGER, "
+                + "total_winner INTEGER, "
+                + "amount_per_voucher INTEGER, "
+                + "start_date timestamp, "
+                + "end_date timestamp,"
+                + "redeem_duration INTEGER,"
+                + "updated_at timestamp "
+                +")";
+
         // Install tables
         db.execSQL(CREATE_USER_TABLE);
         db.execSQL(CREATE_LOGIN_TABLE);
+        db.execSQL(CREATE_CATEGORY_GROUP_TABLE);
+        db.execSQL(CREATE_CATEGORY_TABLE);
+        db.execSQL(CREATE_SUB_CATEGORY_TABLE);
+        db.execSQL(CREATE_TTL_TIMESTAMP_TABLE);
+        db.execSQL(CREATE_EVENT_TABLE);
+		db.execSQL(TABLE_PARTICIPANT_EVENT);
     }
 
     @Override
@@ -97,6 +162,12 @@ public class SqliteDB extends SQLiteOpenHelper
         // Drop older table if existed
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_USER);
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_LOGIN);
+        db.execSQL("DROP TABLE IF EXISTS " + TABLE_CATEGORY_GROUP);
+        db.execSQL("DROP TABLE IF EXISTS " + TABLE_CATEGORY);
+        db.execSQL("DROP TABLE IF EXISTS " + TABLE_SUB_CATEGORY);
+        db.execSQL("DROP TABLE IF EXISTS " + TABLE_TTL_TIMESTAMP);
+        db.execSQL("DROP TABLE IF EXISTS " + TABLE_EVENT);
+		db.execSQL("DROP TABLE IF EXISTS " + TABLE_PARTICIPANT_EVENT);
 
         // Create tables again
         onCreate(db);
